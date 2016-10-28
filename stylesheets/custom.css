@@ -1,0 +1,41 @@
+body {
+	padding: 2em;
+	background-image: url("../images/white.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.center-this {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.option {
+	float: right;
+	margin-right: 0.7em;
+}
+
+.box {
+	margin-bottom: 1em;
+	background: rgba(93, 196, 255, 0.4);
+	padding: 1em;
+	border: 1px solid black;
+	border-radius: 1em;
+	text-align: center;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+h1, h2 {
+	text-align: center;
+	margin: 1.5em 0;
+}
+
