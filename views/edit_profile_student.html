@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Profile | Attendance Monitoring System</title>
+	<title>Edit profile | Attendance Monitoring System</title>
 	<link rel="icon" href="../images/favicon.png">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="../stylesheets/custom.css">
@@ -17,15 +17,17 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" id="logo" href="dashboard.html">Attendance Monitoring System</a>
+        <a class="navbar-brand" id="logo" href="dashboard_student.html">Attendance Monitoring System</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="dashboard.html">Dashboard</a></li>
-          <li class="active"><a href="view_profile.html">Profile</a></li>
-          <li><a href="my_account.html">Settings</a></li>
+          <li><a href="dashboard_student.html">Dashboard</a></li>
+          <li><a href="student_classes.html">Classes</a></li>
+          <li class="active"><a href="view_profile_student.html">Profile</a></li>
+          <li><a href="messages.html">Messages</a></li>
+          <li><a href="my_account.html">Account</a></li>
           <li><a href="login.html">Logout</a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
@@ -34,51 +36,35 @@
 </head>
 <body>
 	<div class="container">
-		<h1>My profile</h1>
-    <a href="edit_profile.html" class="option">Edit</a>
+		<h1>Edit profile</h1>
     <hr/>
-    <div class="row">
-      <div class="col-md-12 well well-lg">
-        <div class="col-md-12">
-          <h4>Name</h4>
-          <p class="lead" style="font-size: 3em;">Prakriti Sharma</p>
-        </div>
-        <div class="col-md-12">
-          <h4>Enrollment number</h4>
-          <p class="lead" style="font-size: 2em;">00711404516</p>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12 well well-lg">
-        <div class="col-md-6">
-          <h4>Email</h4>
-          <p class="lead">prakritisharma@example.com</p>
-        </div>
-        <div class="col-md-6">
-          <h4>Phone</h4>
-          <p class="lead">+919876543210</p>
-        </div>
-        <div class="col-md-6">
-          <h4>Date of birth</h4>
-          <p class="lead">November 07, 1991</p>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12 well well-lg">
-        <div class="col-md-6">
-          <h4>Course</h4>
-          <p class="lead">MCA</p>
-        </div>
-        <div class="col-md-6">
-          <h4>Stream</h4>
-          <p class="lead">SE</p>
-        </div>
-        <div class="col-md-6">
-          <h4>Year of admission</h4>
-          <p class="lead">2016</p>
-        </div>
+    <div class="row" style="margin-top: 4em">
+      <div class="col-md-6 col-md-offset-3">
+        <form>
+          <div class="form-group">
+            <p class="lead form-control-static" style="font-size: 2.5em;">Prakriti Sharma</p>
+          </div>
+          <div class="form-group">
+            <p class="lead form-control-static">Enrollment number: 00711404516</p>
+          </div>
+          <div class="form-group">
+            <p class="lead form-control-static">Date of birth: November 07, 1991</p>
+          </div>
+          <div class="form-group">
+            <p class="lead form-control-static">Course &amp; stream: MCA SE</p>
+          </div>
+          <div class="form-group">
+            <p class="lead form-control-static">Year of admission: 2016</p>
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control input-lg" placeholder="Email"/>
+          </div>
+          <div class="form-group">
+            <input type="number" class="form-control input-lg" placeholder="Phone"/>
+          </div>
+          <button type="submit" class="btn btn-lg btn-block btn-primary">Update</button>
+          <a href="javascript:history.back()" class="btn btn-danger btn-lg btn-block" role="button">Cancel</a>
+        </form>
       </div>
     </div>
   </div>

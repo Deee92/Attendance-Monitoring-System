@@ -3,74 +3,123 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>My Classes | Attendance Monitoring System</title>
+	<title>Classes | Attendance Monitoring System</title>
 	<link rel="icon" href="../images/favicon.png">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="../stylesheets/custom.css">
+	<nav class="navbar navbar-default">
+  	<div class="container-fluid">
+    	<!-- Brand and toggle get grouped for better mobile display -->
+    	<div class="navbar-header">
+      	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        	<span class="sr-only">Toggle navigation</span>
+        	<span class="icon-bar"></span>
+        	<span class="icon-bar"></span>
+        	<span class="icon-bar"></span>
+      	</button>
+      	<a class="navbar-brand" id="logo" href="dashboard_student.html">Attendance Monitoring System</a>
+    	</div>
+
+    	<!-- Collect the nav links, forms, and other content for toggling -->
+    	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      	<ul class="nav navbar-nav navbar-right">
+      		<li><a href="dashboard_student.html">Dashboard</a></li>
+      		<li class="active"><a href="student_classes.html">Classes</a></li>
+      		<li><a href="view_profile_student.html">Profile</a></li>
+          <li><a href="messages.html">Messages</a></li>
+        	<li><a href="my_account.html">Account</a></li>
+        	<li><a href="login.html">Logout</a></li>
+      	</ul>
+    	</div><!-- /.navbar-collapse -->
+  	</div><!-- /.container-fluid -->
+	</nav>
 </head>
 <body>
-	<a href="index.html"><h5 class="option">Logout</h5></a>
-	<div>
-		<ol class="breadcrumb">
-			<li>Student</li>
-			<li><a href="student.html">Dashboard</a></li>
-  		<li class="active">Classes</li>
-		</ol>
-	</div>
-	<h1>Classes</h1>
-	<!-- Course and semester of student here -->
-	<h2>Course, Semester</h2>
-	<div class="table-responsive">
-		<table class="table table-striped table-bordered table-hover" style="text-align: center;">
-			<tr class="info">
-				<th style="text-align: center;">Subject</th>
-				<th style="text-align: center;">Teacher</th>
-				<th style="text-align: center;">Attendance (%)</th>
-				<th colspan="2" style="text-align: center;">Options</th>
-			</tr>
-			<tr>
-				<td>Subject 1</td>
-				<td>Teacher 1</td>
-				<td>Attendance 1</td>
-				<td><a href="student_classes_subject.html">View</a></td>
-				<td><a href="#">Message</a></td>
-			</tr>
-			<tr>
-				<td>Subject 2</td>
-				<td>Teacher 2</td>
-				<td>Attendance 2</td>
-				<td><a href="#">View</a></td>
-				<td><a href="#">Message</a></td>
-			</tr>
-			<tr>
-				<td>Subject 3</td>
-				<td>Teacher 3</td>
-				<td>Attendance 3</td>
-				<td><a href="#">View</a></td>
-				<td><a href="#">Message</a></td>
-			</tr>
-			<tr>
-				<td>Labarotory 1 </td>
-				<td>Teacher 4</td>
-				<td>Attendance 4</td>
-				<td><a href="#">View</a></td>
-				<td><a href="#">Message</a></td>
-			</tr>
-			<tr>
-				<td>...</td>
-				<td>...</td>
-				<td>...</td>
-				<td>...</td>
-				<td>...</td>
-			</tr>
-			<tr>
-				<td>...</td>
-				<td>...</td>
-				<td>...</td>
-				<td>...</td>
-				<td>...</td>
-			</tr>
-		</table>
+	<div class="container">
+		<h1>My classes</h1>
+		<hr/>
+		<!-- Course and semester of student here -->
+		<h2>Course, Semester</h2>
+		<!-- <h2>MCA (SE), Semester 1</h2> -->
+		<div class="table-responsive">
+			<table class="table table-striped table-bordered table-hover" style="text-align: center;">
+				<tr class="info">
+					<th style="text-align: center;">Subject</th>
+					<th style="text-align: center;">Teacher</th>
+					<th style="text-align: center;">Attendance (%)</th>
+					<th colspan="2" style="text-align: center;">Options</th>
+				</tr>
+				<tr>
+					<td>Subject 1</td>
+					<td>Teacher 1</td>
+					<td>Attendance 1</td>
+					<td><a href="student_classes_subject.html">View</a></td>
+					<td><button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#messageModal" data-whatever="@teacher1">Message</button></td>
+				</tr>
+				<tr>
+					<td>Subject 2</td>
+					<td>Teacher 2</td>
+					<td>Attendance 2</td>
+					<td><a href="#">View</a></td>
+					<td><button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#messageModal" data-whatever="@teacher2">Message</button></td>
+				</tr>
+				<tr>
+					<td>Subject 3</td>
+					<td>Teacher 3</td>
+					<td>Attendance 3</td>
+					<td><a href="#">View</a></td>
+					<td><button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#messageModal" data-whatever="@teacher3">Message</button></td>
+				</tr>
+				<tr>
+					<td>Labarotory 1 </td>
+					<td>Teacher 4</td>
+					<td>Attendance 4</td>
+					<td><a href="#">View</a></td>
+					<td><button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#messageModal" data-whatever="@teacher4">Message</button></td>
+				</tr>
+				<tr>
+					<td>...</td>
+					<td>...</td>
+					<td>...</td>
+					<td>...</td>
+					<td>...</td>
+				</tr>
+				<tr>
+					<td>...</td>
+					<td>...</td>
+					<td>...</td>
+					<td>...</td>
+					<td>...</td>
+				</tr>
+			</table>
+		</div>
+		<div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="messageModalLabel">
+			<div class="modal-dialog" role="document">
+	    	<div class="modal-content">
+	      	<div class="modal-header">
+	        	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        	<h4 class="modal-title" id="messageModalLabel">New message</h4>
+	      	</div>
+	      	<div class="modal-body">
+	      		<a href="messages.html" style="float: right; margin-bottom: 0.7em;"><span class="glyphicon glyphicon-link" aria-hidden="true"></span></a>
+	        	<form>
+	          	<div class="form-group">
+	            	<label for="recipient-name" class="control-label">Recipient:</label>
+	            	<input type="text" class="form-control" id="recipient-name">
+	          	</div>
+	          	<div class="form-group">
+	            	<label for="message-text" class="control-label">Message:</label>
+	            	<textarea class="form-control" id="message-text"></textarea>
+	          	</div>
+	        	</form>
+	      	</div>
+	      	<div class="modal-footer">
+	        	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        	<a href="#"><button type="button" class="btn btn-primary">Send message</button></a>
+	      	</div>
+	    	</div>
+	  	</div>
+		</div>
 	</div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

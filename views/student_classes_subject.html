@@ -1,54 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Subject | Attendance Monitoring System</title>
-	<link rel="icon" href="../images/favicon.png">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" href="../stylesheets/custom.css">
-	<link rel="stylesheet" href="../stylesheet/calendar.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SubjectName | Attendance Monitoring System</title>
+  <link rel="icon" href="../images/favicon.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="../stylesheets/custom.css">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" id="logo" href="dashboard_student.html">Attendance Monitoring System</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="dashboard_student.html">Dashboard</a></li>
+          <li class="active"><a href="student_classes.html">Classes</a></li>
+          <li><a href="view_profile_student.html">Profile</a></li>
+          <li><a href="messages.html">Messages</a></li>
+          <li><a href="my_account.html">Account</a></li>
+          <li><a href="login.html">Logout</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
 </head>
 <body>
-<a href="index.html"><h5 class="option">Logout</h5></a>
-	<div>
-		<ol class="breadcrumb">
-			<li>Student</li>
-  		<li><a href="student.html">Dashboard</a></li>
-  		<li><a href="student_classes.html">My classes</a></li>
-  		<li class="active">Subject</li>
-		</ol>
-	</div>
-	<h1>Subject Name</h1>
-	<h2>Teacher Name <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#messageModal" data-whatever="@teacher">Message</button></h2>
-	<div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="messageModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="messageModalLabel">New message</h4>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <label for="recipient-name" class="control-label">Recipient:</label>
-            <input type="text" class="form-control" id="recipient-name">
+  <div class="container">
+	  <h1>Subject Name</h1>
+    <hr/>
+	  <h2>Teacher Name <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#messageModal" data-whatever="@teacher">Message</button></h2>
+    <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="messageModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="messageModalLabel">New message</h4>
           </div>
-          <div class="form-group">
-            <label for="message-text" class="control-label">Message:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+          <div class="modal-body">
+            <a href="messages.html" style="float: right; margin-bottom: 0.7em;"><span class="glyphicon glyphicon-link" aria-hidden="true"></span></a>
+            <form>
+              <div class="form-group">
+                <label for="recipient-name" class="control-label">Recipient:</label>
+                <input type="text" class="form-control" id="recipient-name">
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="control-label">Message:</label>
+                <textarea class="form-control" id="message-text"></textarea>
+              </div>
+            </form>
           </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <a href="#"><button type="button" class="btn btn-primary">Send message</button></a>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <a href="#"><button type="button" class="btn btn-primary">Send message</button></a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-	<h3>Attendance: x%</h3>
-	<div class="row">
+    <h3>Attendance: x%</h3>
+    <div class="row">
 		<div class="col-lg-12">
 			<div id="my-calendar"></div>
 		</div>
