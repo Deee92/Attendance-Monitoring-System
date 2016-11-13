@@ -38,6 +38,15 @@
 	<div class="container">
 		<h1>Hello, TeacherName!</h1>
 		<hr/>
+		<!-- If new messages present -->
+		<div class="alert alert-success alert-dismissible fade in" role="alert">
+		 	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		 		<span aria-hidden="true">&times;</span>
+		 	</button>
+		 	<p>
+		 		You have x new messages. <a href="messages.html"><button type="button" class="btn btn-xs btn-success">View</button></a>
+		 	</p>
+		</div>
 		<div class="row">
 			<div class="col-sm-6 col-xs-12">
 				<div class="col-sm-12 box">
@@ -51,7 +60,8 @@
 			</div>
 			<div class="col-sm-6 col-xs-12">
 				<div class="col-sm-12 box">
-					<a href="messages.html">Messages</a>
+					<!-- Number of new messages in badge -->
+					<a href="messages.html">Messages <span class="badge">x</span></a>
 				</div>
 			</div>
 			<div class="col-sm-6 col-xs-12">
