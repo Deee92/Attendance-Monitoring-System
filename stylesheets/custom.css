@@ -19,7 +19,16 @@ body {
 	background-color: #fece2f;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
-    color: #111;
+  color: #111;
+}
+
+.nav > li > a {
+    background-color: #fece2f;
+    color: #000;
+}
+
+.nav > li > a:hover, .nav > li > .active {
+	color: #000;
 }
 
 #logo {

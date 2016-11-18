@@ -7,3 +7,11 @@ $('#messageModal').on('show.bs.modal', function (event) {
   modal.find('.modal-title').text('New message to ' + recipient)
   modal.find('.modal-body input').val(recipient)
 })
+
+$('#myTabs a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+$('#myTabs a[href="#compose"]').tab('show')
+$('#myTabs a[href="#inbox"]').tab('show')
+$('#myTabs a[href="#sent"]').tab('show')

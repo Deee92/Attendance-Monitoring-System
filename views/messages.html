@@ -38,6 +38,38 @@
 	<div class="container">
 		<h1>My messages</h1>
 		<hr/>
+    <div>
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#compose" aria-controls="compose" role="tab" data-toggle="tab">Compose</a></li>
+        <li role="presentation"><a href="#inbox" aria-controls="inbox" role="tab" data-toggle="tab">Inbox</a></li>
+        <li role="presentation"><a href="#sent" aria-controls="sent" role="tab" data-toggle="tab">Sent</a></li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane fade in active" id="compose">
+          <h3>Compose message</h3>
+          <form class="box">
+            <div class="form-group">
+              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="To">
+            </div>
+            <textarea class="form-control" rows="8" placeholder="Message"></textarea>
+            <button type="submit" class="btn btn-block btn-success" style="margin-top: 1em;">Send</button>
+          </form>
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="inbox">
+          <div class="alert alert-success fade in" role="alert">
+            <p>Nothing here!</p>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="sent">
+          <div class="alert alert-success fade in" role="alert">
+            <p>Nothing here!</p>
+          </div>
+        </div>
+      </div>
+    </div>
 	</div>
   <footer class="footer">
     <div class="container">
